@@ -47,6 +47,7 @@ document.getElementById("btnClose").addEventListener("click", () => {
 });
 
 const changePercentage = (el, max) => {
+    console.log("--😀--",el)
   let percentage = 0;
 
   const id = setInterval(() => {
@@ -72,7 +73,7 @@ const animatePercentage = () => {
 
       // document.querySelector(".navBar").style.backgroundColor = "red";
       const skillTextEl = entry.target.firstElementChild.lastElementChild;
-
+      console.log(skillTextEl);
       const id = entry.target.getAttribute("id");
 
       switch (id) {
@@ -112,7 +113,7 @@ const animatePercentage = () => {
     });
   }, options);
 
-  let singleSkillDiv = document.querySelectorAll(".singleSkillDiv");
+  let singleSkillDiv = document.querySelectorAll(".skillContent");
 
   singleSkillDiv.forEach((item) => {
     observer.observe(item);
